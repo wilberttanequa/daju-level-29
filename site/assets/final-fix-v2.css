@@ -30,10 +30,10 @@
 
 .scene-scratch .scratch-flower-frame {
   position: absolute;
-  top: 52.57%;
-  left: 50%;
-  width: 43.2%;
-  aspect-ratio: 407 / 414;
+  top: 52.8%;
+  left: 50.15%;
+  width: 44.7%;
+  aspect-ratio: 1.04 / 1;
   transform: translateX(-50%);
 }
 
