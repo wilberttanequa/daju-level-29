@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#edc995" />
     <meta name="description" content="为大橘定制的29岁生日互动闯关游戏。" />
+    <link rel="preload" as="image" href="/daju-level-29/assets/daju-clay-room-bg.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/daju-level-29/assets/daju-scratch-reference.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/daju-level-29/assets/yaowen-clay.webp" />
+    <link rel="preload" as="image" href="/daju-level-29/assets/menmen-clay.webp" />
+    <link rel="preload" as="image" href="/daju-level-29/assets/liuge-clay.webp" />
     <link rel="icon" href="./favicon.svg" />
     <title>大橘的29级生日副本</title>
+    <style>
+      html, body { background: #edcfa9; }
+      html.app-loading #root { opacity: 0; }
+      html.app-loading.bg-ready #root { opacity: 1; transition: opacity .22s ease-out; }
+    </style>
+    <script>
+      document.documentElement.classList.add('app-loading');
+      const criticalImages = [
+        '/daju-level-29/assets/daju-clay-room-bg.webp',
+        '/daju-level-29/assets/daju-scratch-reference.webp',
+        '/daju-level-29/assets/yaowen-clay.webp',
+        '/daju-level-29/assets/menmen-clay.webp',
+        '/daju-level-29/assets/liuge-clay.webp'
+      ];
+      const ready = criticalImages.map((src) => {
+        const img = new Image();
+        img.src = src;
+        return img.decode ? img.decode().catch(() => undefined) : new Promise((resolve) => {
+          img.onload = img.onerror = resolve;
+        });
+      });
+      Promise.all(ready).finally(() => document.documentElement.classList.add('bg-ready'));
+      window.setTimeout(() => document.documentElement.classList.add('bg-ready'), 3500);
+    </script>
     <script type="module" crossorigin src="/daju-level-29/assets/index-5Lm3pWh_.js"></script>
     <link rel="stylesheet" crossorigin href="/daju-level-29/assets/index-BuUWiWEU.css">
   </head>
