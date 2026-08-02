@@ -30,10 +30,10 @@
 
 .scene-scratch .scratch-flower-frame {
   position: absolute;
-  top: 52.8%;
-  left: 50.15%;
-  width: 44.7%;
-  aspect-ratio: 1.04 / 1;
+  top: 52.2129%;
+  left: 50.2125%;
+  width: 43.6769%;
+  aspect-ratio: 411 / 418;
   transform: translateX(-50%);
 }
 
@@ -51,7 +51,7 @@
 }
 
 .scene-cake .number-candles {
-  top: -64px;
+  top: -46px;
   z-index: 15;
 }
 
